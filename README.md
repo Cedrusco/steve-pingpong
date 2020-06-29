@@ -1,1 +1,1 @@
-# steve-pingpong
+# kafka-pingpong-reference
