@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eff5dfc2-8734-41b0-acca-47bb9f6af9d3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cedrus/enablement/spring/kafka/springkafkapong/model/PongBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cedrus/enablement/spring/kafka/springkafkapong/model/PongBall.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="initial-commit" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cY7Inftw7z2nvBqVmhKAclfkgp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="SpringKafkaPongApplication" type="Application" factoryName="Application" temporary="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.cedrus.enablement.spring.kafka.springkafkapong.SpringKafkaPongApplication" />
+      <module name="spring-kafka-pong.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pingpong.kafkapingpong.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SpringKafkaPongApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eff5dfc2-8734-41b0-acca-47bb9f6af9d3" name="Default Changelist" comment="" />
+      <created>1590693595721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590693595721</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="246" y="43" key="#Project_Structure" timestamp="1592943126415">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="246" y="43" key="#Project_Structure/0.23.1440.877@0.23.1440.877" timestamp="1592943126415" />
+    <state x="472" y="-703" key="#Scopes" timestamp="1593436499945">
+      <screen x="-241" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="472" y="-703" key="#Scopes/0.23.1440.877/-241.-1057.1920.1057@-241.-1057.1920.1057" timestamp="1593436499945" />
+    <state x="317" y="54" key="#SpringKafkaPongApplication" timestamp="1593442548239">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="487" y="-911" key="#SpringKafkaPongApplication/0.23.1440.877/-241.-1057.1920.1057@-241.-1057.1920.1057" timestamp="1593437558738" />
+    <state x="317" y="54" key="#SpringKafkaPongApplication/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593442548239" />
+    <state x="11" y="101" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593441980605">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="585" y="-906" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-241.-1057.1920.1057@-241.-1057.1920.1057" timestamp="1593436909898" />
+    <state x="11" y="101" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593441980605" />
+    <state x="415" y="339" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1593442191809">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="858" y="-771" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877/-241.-1057.1920.1057@-241.-1057.1920.1057" timestamp="1593437089048" />
+    <state x="415" y="339" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593442191809" />
+    <state x="487" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593453048927">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="487" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1593453048927" />
+    <state x="418" y="-771" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593435039153">
+      <screen x="-241" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="418" y="-771" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/-241.-1057.1920.1057@-241.-1057.1920.1057" timestamp="1593435039153" />
+    <state width="1344" height="268" key="GridCell.Tab.0.bottom" timestamp="1593528287123">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1473" height="252" key="GridCell.Tab.0.bottom/0.23.1440.877/-241.-1057.1920.1057@-241.-1057.1920.1057" timestamp="1593439490438" />
+    <state width="1344" height="324" key="GridCell.Tab.0.bottom/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593446989384" />
+    <state width="1344" height="268" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1593528287123" />
+    <state width="1344" height="268" key="GridCell.Tab.0.center" timestamp="1593528287122">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1473" height="252" key="GridCell.Tab.0.center/0.23.1440.877/-241.-1057.1920.1057@-241.-1057.1920.1057" timestamp="1593439490437" />
+    <state width="1344" height="324" key="GridCell.Tab.0.center/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593446989382" />
+    <state width="1344" height="268" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1593528287122" />
+    <state width="1344" height="268" key="GridCell.Tab.0.left" timestamp="1593528287122">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1473" height="252" key="GridCell.Tab.0.left/0.23.1440.877/-241.-1057.1920.1057@-241.-1057.1920.1057" timestamp="1593439490433" />
+    <state width="1344" height="324" key="GridCell.Tab.0.left/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593446989381" />
+    <state width="1344" height="268" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1593528287122" />
+    <state width="1344" height="268" key="GridCell.Tab.0.right" timestamp="1593528287122">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1473" height="252" key="GridCell.Tab.0.right/0.23.1440.877/-241.-1057.1920.1057@-241.-1057.1920.1057" timestamp="1593439490438" />
+    <state width="1344" height="324" key="GridCell.Tab.0.right/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593446989383" />
+    <state width="1344" height="268" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1593528287122" />
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom" timestamp="1593444202855">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.bottom/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593444202855" />
+    <state width="1398" height="286" key="GridCell.Tab.1.center" timestamp="1593444202854">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.center/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593444202854" />
+    <state width="1398" height="286" key="GridCell.Tab.1.left" timestamp="1593444202853">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.left/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593444202853" />
+    <state width="1398" height="286" key="GridCell.Tab.1.right" timestamp="1593444202854">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="286" key="GridCell.Tab.1.right/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593444202854" />
+    <state x="308" y="211" key="IDE.errors.dialog" timestamp="1593441919700">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="308" y="211" key="IDE.errors.dialog/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593441919700" />
+    <state x="88" y="24" key="SettingsEditor" timestamp="1593442528374">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="30" y="-889" key="SettingsEditor/0.23.1440.877/-241.-1057.1920.1057@-241.-1057.1920.1057" timestamp="1593436447198" />
+    <state x="88" y="24" key="SettingsEditor/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593442528374" />
+    <state x="260" y="63" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1593092718590" />
+    <state x="726" y="251" width="522" height="435" key="StructurePopup" timestamp="1592943243606">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="727" y="-782" width="540" height="524" key="StructurePopup/0.23.1440.877/-241.-1057.1920.1057@-241.-1057.1920.1057" timestamp="1590764230646" />
+    <state x="726" y="251" width="522" height="435" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1592943243606" />
+    <state x="430" y="216" width="716" height="490" key="find.popup" timestamp="1593527408065">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="332" y="-824" width="982" height="591" key="find.popup/0.23.1440.877/-241.-1057.1920.1057@-241.-1057.1920.1057" timestamp="1593437562994" />
+    <state x="430" y="216" width="737" height="518" key="find.popup/0.23.1440.877/-241.-1057.1920.1057@0.23.1440.877" timestamp="1593450795932" />
+    <state x="430" y="216" width="716" height="490" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1593527408065" />
+    <state x="162" y="-899" key="new project wizard" timestamp="1591383828400">
+      <screen x="-241" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="162" y="-899" key="new project wizard/0.23.1440.877/-241.-1057.1920.1057@-241.-1057.1920.1057" timestamp="1591383828400" />
+    <state x="674" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1590693753937">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="674" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1590693753937" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/spring_kafka_pong$SpringKafkaPongApplication.ic" NAME="SpringKafkaPongApplication Coverage Results" MODIFIED="1593441817104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.pingpong.kafkapingpong.*</FILTER>
+    </SUITE>
+  </component>
+</project>
