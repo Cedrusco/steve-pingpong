@@ -99,7 +99,7 @@ public class TopologyProvider {
                 final PongBall pingPongBall = deserialize(value);
 
                 log.info("Returning ping pong ball: {}", pingPongBall);
-                pingPongBall.returnBall();
+                pingPongBall.returnBall(pingPongBall);
                 return serialize(pingPongBall);
             }
 
