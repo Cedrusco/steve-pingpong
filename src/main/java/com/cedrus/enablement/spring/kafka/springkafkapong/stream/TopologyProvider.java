@@ -6,6 +6,8 @@ import com.cedrus.enablement.spring.kafka.springkafkapong.model.PongBall;
 import com.cedrus.enablement.spring.kafka.springkafkapong.model.PongTarget;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsBuilder;
@@ -28,101 +30,81 @@ public class TopologyProvider {
   private final AppConfig appConfig;
   private final ObjectMapper objectMapper;
 
-  @Autowired
-  public TopologyProvider(TopicConfig topicConfig, AppConfig appConfig, ObjectMapper objectMapper) {
-    this.topicConfig = topicConfig;
-    this.appConfig = appConfig;
-    this.objectMapper = objectMapper;
-  }
-
-  public Topology getPingPongTopology(PongTarget pongTarget) {
-    final StreamsBuilder builder =
-        new StreamsBuilder();
-    log.info("Starting to build the stream now.");
-
-    final KStream<String, String> initialStream =
-        builder.stream(
-            topicConfig.getTopicName(),
-            Consumed.with(
-                Serdes.String(),
-                Serdes.String()));
-
-    final KStream<String, String>[] branches =
-        initialStream.branch(getTargetFilterPredicate(pongTarget));
-
-    final KStream<String, String> filteredStream = branches[0];
-
-    final KStream<String, String> loggedAndDelayedSteam =
-        filteredStream.transformValues(
-            getLogAndDelayVts());
-
-    loggedAndDelayedSteam.to(
-        topicConfig.getTopicName(),
-        Produced.with(
-            Serdes.String(),
-            Serdes.String()));
-    return builder.build();
-  }
-
-  private Predicate<String, String> getTargetFilterPredicate(PongTarget pongTarget) {
-    return new Predicate<String, String>() {
-      @Override
-      public boolean test(String key, String value) {
-        PongBall pongBall = deserializeBall(value);
-        return pongBall.getPongTarget().equals(pongTarget);
-      }
-    };
-  }
-
-  private PongBall deserializeBall(String pongBallAsString) {
-    try {
-      return objectMapper.readValue(pongBallAsString, PongBall.class);
-    } catch (Exception e) {
-      throw new RuntimeException(e);
+    @Autowired
+    public TopologyProvider(TopicConfig topicConfig, AppConfig appConfig, ObjectMapper objectMapper){
+        this.topicConfig = topicConfig;
+        this.appConfig = appConfig;
+        this.objectMapper = objectMapper;
     }
-  }
 
-  private String serializeBall(PongBall pongBall) {
-    try {
-      return objectMapper.writeValueAsString(pongBall);
-    } catch (Exception e) {
-      throw new RuntimeException(e);
+    public Topology getTopology(PongTarget pongTarget) {
+        final StreamsBuilder builder = new StreamsBuilder();
+        log.info("Stream builder initialized");
+        log.info(pongTarget.toString());
+
+        final KStream<String, String> incomingStream = builder.stream(topicConfig.getTopicName(), Consumed.with(Serdes.String(), Serdes.String()));
+
+        final KStream<String, String> filteredStream = incomingStream.branch((key, value) -> {
+            PongBall pingPongBall = deserialize(value);
+            log.info("deserialize value: {}", pingPongBall);
+            return pingPongBall.getPongTarget().equals(pongTarget);
+        })[0];
+
+        final KStream<String, String> loggedAndDelayedStream = filteredStream.transformValues(getLogsAndDelay());
+
+        loggedAndDelayedStream.to(topicConfig.getTopicName(), Produced.with(Serdes.String(), Serdes.String()));
+
+        return builder.build();
     }
-  }
 
-  private ValueTransformerSupplier<String, String> getLogAndDelayVts() {
-    return () ->
-        new ValueTransformer<String, String>() {
-          @Override
-          public void init(ProcessorContext context) {
-          }
+    private PongBall deserialize(String pingPongBallString) {
+        try {
+            return objectMapper.readValue(pingPongBallString, PongBall.class);
+        } catch (Exception e) {
+            log.debug("Deserialize error: {}", pingPongBallString);
+            throw new RuntimeException(e);
+        }
+    }
 
-          @Override
-          public String transform(String value) {
-            log.info("Transforming ball -  Value is: {}", value);
-            log.debug("Received ball.");
-            final int minDelaySec = appConfig.getMinDelaySeconds();
-            final int maxDelaySec = appConfig.getMaxDelaySeconds();
-            final int deltaDelaySec = maxDelaySec - minDelaySec;
-            final Random random = new Random();
-            final int sleepSecs = random.nextInt(deltaDelaySec) + minDelaySec;
-            log.debug("Will Sleep for {} seconds.", sleepSecs);
-            try {
-              Thread.sleep(sleepSecs * 1000L);
-              return value;
-            } catch (
-                InterruptedException
-                    ix) {
-              log.error("Interrupted during Sleep.", ix);
+    private String serialize(PongBall pingPongBall) {
+        try {
+            return objectMapper.writeValueAsString(pingPongBall);
+        } catch (Exception e) {
+            log.debug("Serialize error: {}", pingPongBall);
+            throw new RuntimeException(e);
+        }
+    }
+
+    private ValueTransformerSupplier<String, String> getLogsAndDelay() {
+        return () -> new ValueTransformer<String, String>() {
+            @Override
+            public void init(ProcessorContext context) {}
+
+            @Override
+            public String transform(String value) {
+                log.debug("Ping pong ball received");
+                log.info("Transforming ping pong ball: {}", value);
+                final int minDelay = appConfig.getMinDelaySeconds();
+                final int maxDelay = appConfig.getMaxDelaySeconds();
+
+                final int sleepTime = ThreadLocalRandom.current().nextInt((maxDelay - minDelay) + minDelay);
+                log.debug("Sleep for: {}", sleepTime);
+
+                try {
+                    Thread.sleep(sleepTime * 1000L);
+                } catch (InterruptedException e) {
+                    log.error("Sleep interrupted", e);
+                }
+
+                final PongBall pingPongBall = deserialize(value);
+
+                log.info("Returning ping pong ball: {}", pingPongBall);
+                pingPongBall.returnBall();
+                return serialize(pingPongBall);
             }
-            final PongBall pongBall = deserializeBall(value);
-            pongBall.returnBall();
-            return serializeBall(pongBall);
-          }
 
-          @Override
-          public void close() {
-          }
+            @Override
+            public void close() {}
         };
-  }
+    }
 }
