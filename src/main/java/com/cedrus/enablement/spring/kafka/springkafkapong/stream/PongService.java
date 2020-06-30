@@ -32,7 +32,7 @@ public class PongService {
         StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaConfig.getBootstrapServers());
 
     final KafkaStreams pongStream =
-        new KafkaStreams(springPongTopology.getPingPongTopology(PONG), pongStreamConfiguration);
+        new KafkaStreams(springPongTopology.getTopology(PONG), pongStreamConfiguration);
 
     pongStream.start();
   }

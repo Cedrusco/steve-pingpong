@@ -34,7 +34,7 @@ public class PingService {
         StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, kafkaConfig.getBootstrapServers());
 
     final KafkaStreams pingStream =
-        new KafkaStreams(springPongTopology.getPingPongTopology(PING), pingStreamConfiguration);
+        new KafkaStreams(springPongTopology.getTopology(PING), pingStreamConfiguration);
 
     pingStream.start();
   }
