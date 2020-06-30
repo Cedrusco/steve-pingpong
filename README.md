@@ -1,1 +1,1 @@
-# kafka-pingpong-reference
+# Kafka Ping Pong App
