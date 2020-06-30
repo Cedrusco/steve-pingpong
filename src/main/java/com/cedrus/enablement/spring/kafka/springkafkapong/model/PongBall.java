@@ -13,11 +13,9 @@ public class PongBall {
   private final Color color;
 
   public void returnBall(PongBall pingPongBall) {
-      PongTarget previousTarget;
-      PongTarget newTarget;
-//    if (pongTarget.equals(PongTarget.PING)) {
-//      this.pongTarget = PongTarget.PONG;
-//    } else this.pongTarget = PongTarget.PING;
+    PongTarget previousTarget;
+    PongTarget newTarget;
+
     previousTarget = pingPongBall.pongTarget;
     newTarget = randomTarget();
 
