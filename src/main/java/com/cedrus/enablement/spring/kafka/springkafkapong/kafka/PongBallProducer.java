@@ -4,6 +4,8 @@ import com.cedrus.enablement.spring.kafka.springkafkapong.config.KafkaConfig;
 import com.cedrus.enablement.spring.kafka.springkafkapong.config.TopicConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.Properties;
+import java.util.Random;
+
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
@@ -46,7 +48,22 @@ public class PongBallProducer {
             topicConfig.getTopicName(),
             null,
             event);
+
     producer.send(producerRecord);
     producer.close();
   }
+
+//  private String randomKey() {
+//    int pick = new Random().nextInt(PongPlayers.values().length);
+//
+//    String randomPlayer = PongPlayers.values()[pick].name();
+//
+//    try {
+//      log.info("random player ={}", randomPlayer);
+//      return objectMapper.writeValueAsString(randomPlayer);
+//    } catch (Exception e) {
+//        log.debug("Serialize error: {}", randomPlayer);
+//        throw new RuntimeException(e);
+//    }
+//  }
 }
